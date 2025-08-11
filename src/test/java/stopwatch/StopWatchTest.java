@@ -23,4 +23,14 @@ public class StopWatchTest {
         }
     }
 
+    @Test
+    void givenMinutesEqualSixty_whenAdded_thenIncreaseHour(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.record(60);
+        int minutes = stopWatch.getMinutes();
+        int hours = stopWatch.getHours();
+
+        Assertions.assertEquals(1 , hours);
+    }
+
 }
