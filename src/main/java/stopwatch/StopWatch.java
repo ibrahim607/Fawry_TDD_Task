@@ -18,6 +18,10 @@ public class StopWatch {
                 this.days += hours/24;
             }
         }
+
+        if (hours >= 8){
+            this.days += hours/8;
+        }
     }
 
 
