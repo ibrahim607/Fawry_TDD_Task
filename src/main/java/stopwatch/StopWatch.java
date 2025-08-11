@@ -12,8 +12,12 @@ public class StopWatch {
     public void record(int minutes) {
         if (minutes >= 0 && minutes >= 60) {
             int minutesRemaining = minutes - 60;
-            this.hours += 1;
+            this.hours += minutes / 60;
             this.minutes = minutesRemaining;
+        }
+
+        if (hours >= 24){
+            this.days += 1;
         }
 
     }
