@@ -6,6 +6,9 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 public class StopWatch {
     int minutes;
     int hours;
+    int days;
+
+
     public void record(int minutes) {
         if (minutes >= 0 && minutes >= 60) {
             int minutesRemaining = minutes - 60;
@@ -23,5 +26,8 @@ public class StopWatch {
 
     public int getMinutes() {
         return minutes;
+    }
+    public int getDays() {
+        return days;
     }
 }
