@@ -14,13 +14,12 @@ public class StopWatch {
             int minutesRemaining = minutes - 60;
             this.hours += minutes / 60;
             this.minutes = minutesRemaining;
-            if (hours >= 24){
-                this.days += hours/24;
+            if (hours >= 8){
+                this.days += hours/8;
             }
-        }
-
-        if (hours >= 8){
-            this.days += hours/8;
+        }else if (minutes >= 0)
+        {
+            this.minutes = minutes;
         }
     }
 
